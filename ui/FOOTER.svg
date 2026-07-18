@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1367.73 39.65">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: url(#Degradado_sin_nombre_145);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: none;
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+
+      .cls-2 {
+        stroke: url(#Degradado_sin_nombre_145-4);
+      }
+
+      .cls-3 {
+        stroke: url(#Degradado_sin_nombre_145-2);
+      }
+
+      .cls-4 {
+        stroke: url(#Degradado_sin_nombre_145-6);
+      }
+
+      .cls-5 {
+        stroke: url(#Degradado_sin_nombre_145-7);
+      }
+
+      .cls-7 {
+        fill: url(#Degradado_sin_nombre_145-5);
+      }
+
+      .cls-6 {
+        stroke: url(#Degradado_sin_nombre_145-3);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_145" data-name="Degradado sin nombre 145" x1="173.18" y1="68.35" x2="491.48" y2="-47.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f300ff"/>
+      <stop offset=".16" stop-color="#f102ff"/>
+      <stop offset=".23" stop-color="#ea09ff"/>
+      <stop offset=".28" stop-color="#dd15ff"/>
+      <stop offset=".32" stop-color="#cc26ff"/>
+      <stop offset=".36" stop-color="#b63dff"/>
+      <stop offset=".39" stop-color="#9a5aff"/>
+      <stop offset=".42" stop-color="#797bff"/>
+      <stop offset=".44" stop-color="#52a2ff"/>
+      <stop offset=".47" stop-color="#29cdff"/>
+      <stop offset=".49" stop-color="#00f7ff"/>
+      <stop offset=".49" stop-color="#03f3ff"/>
+      <stop offset=".51" stop-color="#30c5ff"/>
+      <stop offset=".53" stop-color="#589cff"/>
+      <stop offset=".56" stop-color="#7d77ff"/>
+      <stop offset=".58" stop-color="#9d56ff"/>
+      <stop offset=".62" stop-color="#b83bff"/>
+      <stop offset=".65" stop-color="#ce25ff"/>
+      <stop offset=".69" stop-color="#de14ff"/>
+      <stop offset=".74" stop-color="#ea08ff"/>
+      <stop offset=".81" stop-color="#f101ff"/>
+      <stop offset="1" stop-color="#f300ff"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_145-2" data-name="Degradado sin nombre 145" x1="-660.27" y1="90.9" x2="-387.55" y2="-66.55" gradientTransform="translate(511.34) rotate(-180) scale(1 -1)" xlink:href="#Degradado_sin_nombre_145"/>
+    <linearGradient id="Degradado_sin_nombre_145-3" data-name="Degradado sin nombre 145" x1="-838.74" y1="52.86" x2="-706.46" y2="-23.51" gradientTransform="translate(511.34) rotate(-180) scale(1 -1)" xlink:href="#Degradado_sin_nombre_145"/>
+    <linearGradient id="Degradado_sin_nombre_145-4" data-name="Degradado sin nombre 145" x1="8.15" y1="44.7" x2="161.02" y2="-10.95" xlink:href="#Degradado_sin_nombre_145"/>
+    <linearGradient id="Degradado_sin_nombre_145-5" data-name="Degradado sin nombre 145" x1="658.65" y1="88.73" x2="708.81" y2="-49.08" xlink:href="#Degradado_sin_nombre_145"/>
+    <linearGradient id="Degradado_sin_nombre_145-6" data-name="Degradado sin nombre 145" x1="357.2" y1="44.9" x2="494.96" y2="-5.24" xlink:href="#Degradado_sin_nombre_145"/>
+    <linearGradient id="Degradado_sin_nombre_145-7" data-name="Degradado sin nombre 145" x1="1002.28" y1="54.21" x2="883.17" y2="-14.56" xlink:href="#Degradado_sin_nombre_145"/>
+  </defs>
+  <g id="Capa_3" data-name="Capa 3">
+    <g>
+      <polyline class="cls-1" points="511.34 7.3 170.6 7.3 156.45 22.04"/>
+      <g>
+        <polyline class="cls-3" points="856.39 7.3 1197.13 7.3 1211.28 22.04"/>
+        <polyline class="cls-6" points="1200.15 7.3 1212.52 7.3 1227.05 22.04 1367.73 22.04"/>
+      </g>
+      <polyline class="cls-2" points="167.58 7.3 155.21 7.3 140.67 22.04 0 22.04"/>
+      <path class="cls-7" d="M843.43.5l19.33,19.33-19.33,19.33h-319.41l-19.33-19.33,19.33-19.33h319.41M843.64,0h-319.83c-7.74,7.74-12.08,12.08-19.83,19.83,7.74,7.74,12.08,12.08,19.83,19.83h319.83c7.74-7.74,12.08-12.08,19.83-19.83-7.74-7.74-12.08-12.08-19.83-19.83h0Z"/>
+      <line class="cls-4" x1="503.99" y1="19.83" x2="348.16" y2="19.83"/>
+      <line class="cls-5" x1="863.47" y1="19.83" x2="1021.99" y2="19.83"/>
+    </g>
+  </g>
+</svg>
