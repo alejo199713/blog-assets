@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1332.83 40.15">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: url(#Degradado_sin_nombre_222);
+        stroke-miterlimit: 10;
+        stroke-width: .5px;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_222" data-name="Degradado sin nombre 222" x1="718.04" y1="20.07" x2="-614.78" y2="20.07" gradientTransform="translate(718.04) rotate(-180) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f300ff"/>
+      <stop offset=".2" stop-color="#00fff7" stop-opacity=".8"/>
+      <stop offset=".21" stop-color="#07f7f7" stop-opacity=".81"/>
+      <stop offset=".26" stop-color="#45b6f9" stop-opacity=".86"/>
+      <stop offset=".31" stop-color="#7a7efb" stop-opacity=".9"/>
+      <stop offset=".36" stop-color="#a551fc" stop-opacity=".94"/>
+      <stop offset=".4" stop-color="#c72dfd" stop-opacity=".96"/>
+      <stop offset=".45" stop-color="#df14fe" stop-opacity=".98"/>
+      <stop offset=".49" stop-color="#ed05fe" stop-opacity="1"/>
+      <stop offset=".52" stop-color="#f300ff"/>
+      <stop offset=".75" stop-color="#00f7ff" stop-opacity=".8"/>
+      <stop offset=".76" stop-color="#13e3ff" stop-opacity=".82"/>
+      <stop offset=".8" stop-color="#4da7ff" stop-opacity=".86"/>
+      <stop offset=".84" stop-color="#8074ff" stop-opacity=".91"/>
+      <stop offset=".87" stop-color="#a94aff" stop-opacity=".94"/>
+      <stop offset=".91" stop-color="#c92aff" stop-opacity=".97"/>
+      <stop offset=".94" stop-color="#e012ff" stop-opacity=".98"/>
+      <stop offset=".97" stop-color="#ee04ff" stop-opacity="1"/>
+      <stop offset="1" stop-color="#f300ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Capa_3" data-name="Capa 3">
+    <polyline class="cls-1" points="0 39.9 204.26 39.9 228.35 15.81 312.65 15.81 328.22 .25 1004.61 .25 1020.17 15.81 1104.48 15.81 1128.57 39.9 1332.83 39.9"/>
+  </g>
+</svg>

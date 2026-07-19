@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1101.22 126.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#Degradado_sin_nombre_154);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_154" data-name="Degradado sin nombre 154" x1="467.35" y1="291.94" x2="633.86" y2="-165.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f300ff"/>
+      <stop offset=".19" stop-color="#f101fe"/>
+      <stop offset=".25" stop-color="#ea08fe"/>
+      <stop offset=".3" stop-color="#df14fe"/>
+      <stop offset=".34" stop-color="#cf25fd"/>
+      <stop offset=".37" stop-color="#ba3bfd"/>
+      <stop offset=".4" stop-color="#a056fc"/>
+      <stop offset=".43" stop-color="#8177fb"/>
+      <stop offset=".45" stop-color="#5d9cfa"/>
+      <stop offset=".48" stop-color="#34c7f8"/>
+      <stop offset=".5" stop-color="#08f5f7"/>
+      <stop offset=".5" stop-color="#00fff7"/>
+      <stop offset=".5" stop-color="#08f5f7"/>
+      <stop offset=".52" stop-color="#34c7f8"/>
+      <stop offset=".55" stop-color="#5d9cfa"/>
+      <stop offset=".57" stop-color="#8177fb"/>
+      <stop offset=".6" stop-color="#a056fc"/>
+      <stop offset=".63" stop-color="#ba3bfd"/>
+      <stop offset=".66" stop-color="#cf25fd"/>
+      <stop offset=".7" stop-color="#df14fe"/>
+      <stop offset=".75" stop-color="#ea08fe"/>
+      <stop offset=".81" stop-color="#f101fe"/>
+      <stop offset="1" stop-color="#f300ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Capa_3" data-name="Capa 3">
+    <path class="cls-1" d="M1088.49.5l6.11,6.11,6.11,6.11v100.93l-6.11,6.11-6.11,6.11H12.73L.5,113.66V12.73L12.73.5h1075.76M1088.7,0H12.52C7.63,4.89,4.89,7.63,0,12.52v101.35l12.52,12.52h1076.17c4.89-4.89,7.63-7.63,12.52-12.52V12.52c-4.89-4.89-7.63-7.63-12.52-12.52h0Z"/>
+  </g>
+</svg>

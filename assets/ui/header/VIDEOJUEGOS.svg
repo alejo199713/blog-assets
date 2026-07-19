@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 117.47 37.26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #80a4ff;
+        font-family: Aero, Aero;
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: url(#Degradado_sin_nombre_242);
+        stroke-miterlimit: 10;
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre_242" data-name="Degradado sin nombre 242" x1="53.98" y1="45.6" x2="63.49" y2="-8.34" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6a95ff"/>
+      <stop offset=".12" stop-color="#6894fc"/>
+      <stop offset=".19" stop-color="#6590f4"/>
+      <stop offset=".25" stop-color="#5f8be6"/>
+      <stop offset=".3" stop-color="#5783d2"/>
+      <stop offset=".34" stop-color="#4d79b8"/>
+      <stop offset=".39" stop-color="#406c99"/>
+      <stop offset=".42" stop-color="#305d74"/>
+      <stop offset=".43" stop-color="#2d5a6b"/>
+      <stop offset=".46" stop-color="#33607a"/>
+      <stop offset=".52" stop-color="#4370a2"/>
+      <stop offset=".59" stop-color="#517dc4"/>
+      <stop offset=".66" stop-color="#5c87de"/>
+      <stop offset=".73" stop-color="#638ff0"/>
+      <stop offset=".8" stop-color="#6893fb"/>
+      <stop offset=".88" stop-color="#6a95ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Capa_3" data-name="Capa 3">
+    <path class="cls-2" d="M110.57,36.76H6.89L.5,30.37V6.89L6.89.5h103.68l6.39,6.39v23.48l-6.39,6.39Z"/>
+    <text class="cls-1" transform="translate(17.11 22.67)"><tspan x="0" y="0">VIDEOJUEGOS</tspan></text>
+  </g>
+</svg>
