@@ -1,0 +1,182 @@
+/* =====================================================
+   HEADER
+===================================================== */
+
+#site-header {
+
+    width: 100%;
+    height: 200px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+   background:
+    url("https://alejo199713.github.io/blog-assets/assets/ui/HEADER.svg") center calc(50% + 30px) / 100% 100% no-repeat,
+    rgba(0,1,9,.75);
+
+    backdrop-filter: blur(12px);
+
+}
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.header-inner {
+
+    width: min(90%, var(--max-width));
+    height: 140px;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.site-logo {
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+
+}
+
+.site-logo img {
+
+    display: block;
+    height: 100px;
+    width: auto;
+
+}
+
+/* =====================================================
+   MENÚ PRINCIPAL
+===================================================== */
+
+.main-nav {
+
+    display: flex;
+    align-items: center;
+    gap: 0;
+
+    transform: translate(-390px, -30px);
+
+}
+
+.main-nav a {
+
+    display: block;
+
+    width: 180px;
+    height: 45px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    transition: transform .25s ease;
+
+}
+
+.main-nav a:hover {
+
+    transform: scale(1.05);
+
+}
+
+/* =====================================================
+   BOTONES SVG
+===================================================== */
+
+.main-nav .games {
+
+background-image: url("https://alejo199713.github.io/blog-assets/assets/ui/header/VIDEOJUEGOS.svg");
+
+}
+
+.main-nav .design3d {
+
+background-image: url("https://alejo199713.github.io/blog-assets/assets/ui/header/3D-DESIGN.svg");
+
+}
+
+.main-nav .graphic {
+
+background-image: url("https://alejo199713.github.io/blog-assets/assets/ui/header/DISEÑO-GRAFICO.svg");
+
+}
+
+.main-nav .software {
+
+background-image: url("https://alejo199713.github.io/blog-assets/assets/ui/header/SOFTWARE.svg");
+}
+
+/* =====================================================
+   SUBMENÚ
+===================================================== */
+
+.sub-nav {
+
+    width: min(90%, var(--max-width));
+    height: 0;
+
+    overflow: hidden;
+
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    position: relative;
+    z-index: 1001;
+
+    transition: height .3s ease;
+
+}
+
+.sub-nav.active {
+
+    height: 60px;
+
+}
+
+/* =====================================================
+   BOTONES TEMPORALES DEL SUBMENÚ
+===================================================== */
+
+.sub-nav a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 38px;
+    padding: 0 18px;
+
+    color: var(--white);
+    font-family: "VCR";
+    font-size: 16px;
+    text-decoration: none;
+
+    border: 1px solid var(--cyan);
+    border-radius: 6px;
+
+    transition: .25s ease;
+
+}
+
+.sub-nav a:hover {
+
+    background: var(--cyan);
+    color: #000;
+
+}

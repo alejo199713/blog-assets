@@ -1,0 +1,125 @@
+.hero {
+
+    width: min(100%, var(--max-width));
+    margin: 0px 0; /* ❌ quitado el auto */
+
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 25px;
+
+    align-items: start;
+}
+
+/* ===== SIDEBAR ===== */
+
+.left-column{
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+}
+
+/* ===== CONTENIDO ===== */
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    transform: translate(-60px, -24px);
+}
+
+/* ===== TARJETAS ===== */
+
+.avatar-card{
+
+    position:relative;
+
+    height:275px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/AVATAR.svg") center/100% 100% no-repeat;
+
+}
+
+.system-card{
+
+    position:relative;
+
+    height:185px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/SYSTEM-STATUS.svg") center/100% 100% no-repeat;
+
+}
+
+.activity-card{
+
+    position:relative;
+
+    height:215px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/ACTIVITY.svg") center/100% 100% no-repeat;
+
+}
+
+.hero-card{
+
+    position:relative;
+
+    min-height:200px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/HERO.svg") center/100% 100% no-repeat;
+
+}
+
+.projects-card{
+
+    position:relative;
+
+    min-height:370px;
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Proyectos-Destacados.svg") center/100% 100% no-repeat;
+    transform: translateY(-24px);
+}
+
+/* ===== PANELES ===== */
+
+.bottom-panels{
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:    10px;
+
+    transform: translateY(-60px);
+
+
+}
+
+.console-card{
+
+    position:relative;
+
+    min-height:190px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Console.svg") center/100% 100% no-repeat;
+
+}
+
+.social-card{
+
+    position:relative;
+
+    min-height:190px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Social-Hub.svg") center/100% 100% no-repeat;
+
+}
+
+.stats-card{
+
+    position:relative;
+
+    min-height:190px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Project-Stats.svg") center/100% 100% no-repeat;
+
+}

@@ -1,0 +1,35 @@
+.post-card{
+
+    width:100%;
+    padding:20px;
+    margin-bottom:20px;
+
+    border:1px solid var(--cyan);
+    border-radius:10px;
+
+    background:rgba(0,0,0,.35);
+
+}
+
+.post-thumb{
+
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+
+    margin-bottom:15px;
+
+}
+
+.post-card h2{
+
+    font-family:"VCR";
+    margin-bottom:10px;
+
+}
+
+.post-card p{
+
+    color:var(--gray);
+
+}
