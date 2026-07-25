@@ -85,9 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         heroCard.classList.add("expanded");
 
-        heroCard.style.background =
-        'url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") center/100% 100% no-repeat';
-
         projectsCard.classList.add("hidden");
 
     });
