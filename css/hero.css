@@ -25,6 +25,8 @@
 
 .right-column{
 
+    position:relative;
+
     display:flex;
     flex-direction:column;
     gap:10px;
@@ -79,21 +81,18 @@
 
 /* ===== HERO EXPANDIDO ===== */
 
+
 .hero-expanded{
 
     display:none;
 
-    position:relative;
+    position:absolute;
 
-    min-height:1000px;
+    inset:0;
 
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") center/100% 100% no-repeat;
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
 
-}
-
-.hero-expanded.active{
-
-    display:block;
+    z-index:10;
 
 }
 
