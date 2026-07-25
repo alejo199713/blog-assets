@@ -83,7 +83,7 @@ document.addEventListener("click",e=>{
     if(!item) return;
 
     e.preventDefault();
-
+    console.log("CLICK");
     heroCard.classList.add("expanded");
     projectsCard.classList.add("hidden");
 
