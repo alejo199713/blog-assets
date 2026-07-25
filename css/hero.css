@@ -101,12 +101,12 @@
 .projects-card.hidden{
 
     opacity:0;
-
-    transform:translateY(-24px) scale(.96);
-
     pointer-events:none;
 
-    display:none;
+    height:0;
+    min-height:0;
+
+    overflow:hidden;
 
 }
 
