@@ -80,6 +80,8 @@
 
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") center/100% 100% no-repeat;
 
+    transform: translateY(-24px);
+
 }
 
 .projects-card{
