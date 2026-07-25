@@ -86,14 +86,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if(!item) return;
 
         e.preventDefault();
+        
+heroCard.style.display = "none";
 
-        heroCard.style.display = "none";
+heroExpanded.style.display = "block";
 
-        heroExpanded.classList.add("active");
+projectsCard.style.display = "none";
 
-        projectsCard.classList.add("hidden");
-
-        bottomPanels.classList.add("hidden");
+bottomPanels.style.display = "none";
 
     });
 
