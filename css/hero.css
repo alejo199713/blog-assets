@@ -1,13 +1,14 @@
-.hero {
+.hero{
 
-    width: min(100%, var(--max-width));
-    margin: 0px 0; /* ❌ quitado el auto */
+    width:min(100%,var(--max-width));
+    margin:0;
 
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    gap: 25px;
+    display:grid;
+    grid-template-columns:350px 1fr;
+    gap:25px;
 
-    align-items: start;
+    align-items:start;
+
 }
 
 /* ===== SIDEBAR ===== */
@@ -22,12 +23,14 @@
 
 /* ===== CONTENIDO ===== */
 
-.right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.right-column{
 
-    transform: translate(-60px, -24px);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    transform:translate(-60px,-24px);
+
 }
 
 /* ===== TARJETAS ===== */
@@ -62,6 +65,8 @@
 
 }
 
+/* ===== HERO NORMAL ===== */
+
 .hero-card{
 
     position:relative;
@@ -70,19 +75,29 @@
 
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/HERO.svg") center/100% 100% no-repeat;
 
-    transition:.45s ease;
-
 }
 
-.hero-card.expanded{
+/* ===== HERO EXPANDIDO ===== */
+
+.hero-expanded{
+
+    display:none;
+
+    position:relative;
 
     min-height:1000px;
 
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") center/100% 100% no-repeat;
 
-    margin-top:-84px;
+}
+
+.hero-expanded.active{
+
+    display:block;
 
 }
+
+/* ===== PROYECTOS ===== */
 
 .projects-card{
 
@@ -94,19 +109,11 @@
 
     transform:translateY(-24px);
 
-    transition:.35s ease;
-
 }
 
 .projects-card.hidden{
 
-    opacity:0;
-    pointer-events:none;
-
-    height:0;
-    min-height:0;
-
-    overflow:hidden;
+    display:none;
 
 }
 
@@ -116,10 +123,15 @@
 
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:    10px;
+    gap:10px;
 
-    transform: translateY(-60px);
+    transform:translateY(-60px);
 
+}
+
+.bottom-panels.hidden{
+
+    display:none;
 
 }
 
