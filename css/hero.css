@@ -70,6 +70,14 @@
 
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/HERO.svg") center/100% 100% no-repeat;
 
+    transition:.45s ease;
+
+}
+
+.hero-card.expanded{
+
+    min-height:1000px;
+
 }
 
 .projects-card{
@@ -77,8 +85,25 @@
     position:relative;
 
     min-height:370px;
+
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/Proyectos-Destacados.svg") center/100% 100% no-repeat;
-    transform: translateY(-24px);
+
+    transform:translateY(-24px);
+
+    transition:.35s ease;
+
+}
+
+.projects-card.hidden{
+
+    opacity:0;
+
+    transform:translateY(-24px) scale(.96);
+
+    pointer-events:none;
+
+    display:none;
+
 }
 
 /* ===== PANELES ===== */
