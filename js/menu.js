@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const subNav = document.querySelector(".sub-nav");
+
     const heroCard = document.querySelector(".hero-card");
+    const heroExpanded = document.querySelector(".hero-expanded");
     const projectsCard = document.querySelector(".projects-card");
+    const bottomPanels = document.querySelector(".bottom-panels");
 
     const buttons = {
         games: "Videojuegos",
@@ -28,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const filtered = posts.filter(post=>{
 
                 const tags = (post.category || []).map(t=>t.term);
+
                 return tags.includes(label);
 
             });
@@ -75,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    subNav.addEventListener("click", e=>{
+    subNav.addEventListener("click",e=>{
 
         const item = e.target.closest(".submenu-link");
 
@@ -83,9 +87,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         e.preventDefault();
 
-        heroCard.classList.add("expanded");
+        heroCard.style.display = "none";
+
+        heroExpanded.classList.add("active");
 
         projectsCard.classList.add("hidden");
+
+        bottomPanels.classList.add("hidden");
 
     });
 
