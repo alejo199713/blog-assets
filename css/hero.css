@@ -83,13 +83,9 @@
 
     display:none;
 
-    width:min(100%,var(--max-width));
+    position:relative;
 
     min-height:1000px;
-
-    margin-left:375px;
-
-    transform:translate(-60px,-24px);
 
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
 
