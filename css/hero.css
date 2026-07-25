@@ -80,7 +80,7 @@
 
     background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") center/100% 100% no-repeat;
 
-    transform: translateY(-84px);
+    margin-top:-84px;
 
 }
 
