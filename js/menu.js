@@ -1,5 +1,8 @@
 const subNav = document.querySelector(".sub-nav");
 
+const heroCard = document.querySelector(".hero-card");
+const projectsCard = document.querySelector(".projects-card");
+
 const buttons = {
     games: "Videojuegos",
     design3d: "3D",
@@ -42,7 +45,7 @@ async function showCategory(label){
             const title = post.title.$t;
             const link = post.link.find(l=>l.rel==="alternate").href;
 
-            return `<a href="${link}">${title}</a>`;
+            return `<a href="${link}" class="submenu-link">${title}</a>`;
 
         }).join("");
 
@@ -70,5 +73,18 @@ document.querySelectorAll(".main-nav a").forEach(btn=>{
         }
 
     });
+
+});
+
+document.addEventListener("click",e=>{
+
+    const item = e.target.closest(".submenu-link");
+
+    if(!item) return;
+
+    e.preventDefault();
+
+    heroCard.classList.add("expanded");
+    projectsCard.classList.add("hidden");
 
 });
