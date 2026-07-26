@@ -61,10 +61,9 @@
    ========================================== */
 
 .hero-expanded {
-    display: none;
+    display: none; /* Oculto por defecto en la vista Home */
     position: relative;
     min-height: 1000px;
-    /* Corrección: La imagen encaja centrada arriba y escala al 100% */
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% auto no-repeat;
     padding: 40px 30px;
     box-sizing: border-box;
