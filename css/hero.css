@@ -96,7 +96,7 @@
        - Para SUBIR el marco: usa valores negativos como -10px, -20px, etc.
        - Para BAJAR el marco: usa valores positivos como 10px, 20px, etc.
     */
-transform: translateY(-40px) !important;}
+transform: translateY(40px) !important;}
 
 /* ==========================================
    CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
