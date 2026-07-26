@@ -77,30 +77,24 @@
    RESET DE FLUJO Y VISIBILIDAD (VISTA POST)
    ========================================== */
 
-/* 1. Al activar el post, la columna derecha pasa a un flujo de bloque limpio sin desplazamientos */
+/* 1. Al activar el post, la columna derecha cambia su flujo */
 .right-column.post-active {
     transform: none !important;
     gap: 0 !important;
     display: block !important;
 }
 
-/* 2. Ocultar los elementos del Home cuando hay un post activo */
+/* 2. Ocultar los elementos del Home cuando la columna tiene .post-active */
 .right-column.post-active .hero-card,
 .right-column.post-active .projects-card,
 .right-column.post-active .bottom-panels {
     display: none !important;
 }
 
-/* 3. MUEVE EL HERO EXPANDIDO DESDE ESTA LÍNEA */
+/* 3. ÚNICO ACTIVADOR: Muestra y posiciona el Hero Expandido */
 .right-column.post-active .hero-expanded {
     display: block !important;
-    
-    /* 
-       AQUÍ CONTROLAS LA POSICIÓN VERTICAL DEL MARCO:
-       - Números negativos (ej: -30px, -50px) -> SUBEN el marco.
-       - Números positivos (ej: 10px, 30px) -> BAJAN el marco.
-    */
-    transform: translateY(900px) !important; 
+    transform: translateY(-24px) !important; /* Ajuste vertical alineado */
 }
 
 /* ==========================================
