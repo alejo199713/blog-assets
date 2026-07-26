@@ -95,7 +95,7 @@ position: relative !important;
        Ajusta este valor para bajar el Hero Expandido.
        Al estar dentro de .post-active, NO afectará al Hero principal.
     */
-    top: 60px !important; 
+    top: 600px !important; 
 }
 
 /* ==========================================
