@@ -74,23 +74,25 @@
     overflow: hidden !important; /* Mantiene el contenido dentro de los bordes */
 }
 /* ==========================================
-   RESET DE FLUJO Y VISIBILIDAD (VISTA POST)
+   HERO EXPANDIDO - ALTURA EXACTA DE ILLUSTRATOR
    ========================================== */
 
-/* 1. Al activar un post, se limpia el flujo de la columna derecha */
-.right-column.post-active {
-    display: block !important;
-    transform: none !important;
+/* 1. Marco principal de la tarjeta expandida */
+.hero-expanded {
+    display: none; /* Oculto por defecto */
+    position: relative;
+    width: 100%;
+    
+    /* Altura fija exacta basada en la mesa de trabajo de Illustrator */
+    height: 563.89px !important; 
+    
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% 100% no-repeat;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    overflow: hidden !important; /* Mantiene el contenido dentro de los bordes */
 }
 
-/* 2. Ocultar los elementos del Home */
-.right-column.post-active .hero-card,
-.right-column.post-active .projects-card,
-.right-column.post-active .bottom-panels {
-    display: none !important;
-}
-
-/* 3. Muestra el Hero Expandido alineado correctament-----------------------------------------------------------------------------------------------------e */
+/* 2. Regla de activación en la vista de la entrada */
 .right-column.post-active .hero-expanded,
 .hero-expanded.active {
     display: block !important;
@@ -100,7 +102,7 @@
     z-index: 5 !important;
 
     /* Posición y desfase idéntico al Hero Principal */
-    transform: translate(-140px, 94px) !important;
+    transform: translate(-60px, -24px) !important;
     width: 100% !important;
     margin: 0 !important;
 }
@@ -109,16 +111,19 @@
    CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
    ========================================== */
 
+/* 3. Área interna deslizable para el texto e imágenes */
 #postContainer,
 .hero-expanded-content,
 .post-content {
-    max-height: 550px;
-    overflow-y: auto !important;
-    padding-right: 10px;
-    margin-top: 20px;
+    /* Altura calculada para respetar el padding de 40px arriba y abajo */
+    height: 483px !important; 
+    overflow-y: auto !important; /* Habilita la barra de desplazamiento interna */
+    padding-right: 15px;
+    margin-top: 0px;
+    box-sizing: border-box;
 }
 
-/* Personalización Cyberpunk para la barra de scroll */
+/* 4. Estilos Cyberpunk para la barra de scroll */
 #postContainer::-webkit-scrollbar,
 .hero-expanded-content::-webkit-scrollbar,
 .post-content::-webkit-scrollbar {
@@ -128,7 +133,7 @@
 #postContainer::-webkit-scrollbar-track,
 .hero-expanded-content::-webkit-scrollbar-track,
 .post-content::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     border: 1px solid #00ffcc;
 }
 
@@ -137,6 +142,7 @@
 .post-content::-webkit-scrollbar-thumb {
     background: #00ffcc;
     border-radius: 2px;
+    box-shadow: 0 0 10px #00ffcc;
 }
 
 /* ===== PROYECTOS DESTACADOS ===== */
