@@ -90,7 +90,7 @@
 /* 3. Fuerza al Hero Expandido a alinearse en la cima de la columna */
 .right-column.post-active .hero-expanded {
     display: block !important;
-    margin-top: 90 !important;
+    margin-top: -200 !important;
 }
 
 /* ==========================================
