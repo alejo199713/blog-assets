@@ -103,7 +103,7 @@
 
     /* Posición y desfase idéntico al Hero Principal */
     transform: translate(-350px, 300px) !important;
-    width: 180% !important;
+    width: 100% !important;
     margin: 0 !important;
 }
 
