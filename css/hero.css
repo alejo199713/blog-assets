@@ -96,7 +96,12 @@
 /* 3. Fuerza al Hero Expandido a alinearse en la cima de la columna */
 .right-column.post-active .hero-expanded {
     display: block !important;
-    
+        /* 
+       AJUSTE DE POSICIÓN VERTICAL:
+       - Para SUBIR el marco: usa valores negativos como -10px, -20px, etc.
+       - Para BAJAR el marco: usa valores positivos como 10px, 20px, etc.
+    */
+transform: translateY(90px) !important;}
 
 
 /* ==========================================
