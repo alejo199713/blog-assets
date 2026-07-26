@@ -100,7 +100,7 @@
     z-index: 5 !important;
 
     /* Posición y desfase idéntico al Hero Principal */
-    transform: translate(-90px, 94px) !important;
+    transform: translate(-140px, 94px) !important;
     width: 100% !important;
     margin: 0 !important;
 }
