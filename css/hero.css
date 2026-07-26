@@ -57,13 +57,16 @@
 }
 
 /* ===== HERO EXPANDIDO (ESTADO OCULTO POR DEFECTO) ===== */
+/* ==========================================
+   HERO EXPANDIDO - POSICIONAMIENTO DIRECTO
+   ========================================== */
 
 .hero-expanded {
     display: none;
     position: relative;
     
-    /* CAMBIA ESTA LÍNEA PARA BAJAR O SUBIR EL CONTENEDOR */
-    top: 700px; /* Incrementa este valor para bajarlo más (ej. 80px) */
+    /* CAMBIA ESTE VALOR EN PÍXELES PARA BAJAR O SUBIR */
+    transform: translateY(60px) !important; 
     
     min-height: 1000px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
