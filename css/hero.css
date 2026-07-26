@@ -60,13 +60,17 @@
    HERO EXPANDIDO - POSICIONAMIENTO Y CORRECCIÓN
    ========================================== */
 
-.hero-expanded {
-    display: none;
-    position: relative;
-    min-height: 1000px;
-    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
-    padding: 40px 30px;
-    box-sizing: border-box;
+.hero-expanded{
+    display:none;
+    position:relative;
+    min-height:1000px;
+
+    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg")
+               center/100% 100% no-repeat;
+}
+
+.hero-expanded.active{
+    display:block;
 }
 
 /* ==========================================
