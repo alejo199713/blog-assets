@@ -101,7 +101,7 @@
        - Números negativos (ej: -30px, -50px) -> SUBEN el marco.
        - Números positivos (ej: 10px, 30px) -> BAJAN el marco.
     */
-    transform: translateY(90px) !important; 
+    transform: translateY(900px) !important; 
 }
 
 /* ==========================================
