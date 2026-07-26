@@ -91,10 +91,34 @@
 
 }
 
-.hero-expanded.active{
+/* ==========================================
+   HERO EXPANDIDO Y ESTADOS DE VISIBILIDAD
+   ========================================== */
 
-    display:block;
+/* Por defecto, el Hero Expandido está oculto */
+.hero-expanded {
+    display: none;
+    position: relative;
+    min-height: 1000px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
+    padding: 30px;
+    box-sizing: border-box;
+}
 
+/* 
+   CUANDO SE ACTIVA UN POST (Clase .post-active en .right-column):
+*/
+
+/* 1. Ocultar los elementos de la vista Home */
+.right-column.post-active .hero-card,
+.right-column.post-active .projects-card,
+.right-column.post-active .bottom-panels {
+    display: none !important;
+}
+
+/* 2. Mostrar únicamente el Hero Expandido */
+.right-column.post-active .hero-expanded {
+    display: block !important;
 }
 
 /* ===== PROYECTOS ===== */
