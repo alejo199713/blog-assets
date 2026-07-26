@@ -94,6 +94,9 @@
     visibility: visible !important;
     opacity: 1 !important;
    transform: translate(-900px, -200px) !important;
+   /* Opcional: Ancho y margen para calibrar encaje perfecto */
+    width: 100%;
+    margin-top: 0px;
 }
 
 /* ==========================================
