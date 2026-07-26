@@ -64,12 +64,15 @@
     display: none; /* Oculto por defecto */
     position: relative;
     width: 100%;
-    min-height: 800px;
-    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% auto no-repeat;
+    
+    /* Altura fija exacta basada en la mesa de trabajo de Illustrator */
+    height: 563.89px !important; 
+    
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% 100% no-repeat;
     padding: 40px 30px;
     box-sizing: border-box;
+    overflow: hidden !important; /* Mantiene el contenido dentro de los bordes */
 }
-
 /* ==========================================
    RESET DE FLUJO Y VISIBILIDAD (VISTA POST)
    ========================================== */
@@ -93,8 +96,13 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    transform: translate(200px, 200px) !important;
+    position: relative !important;
+    z-index: 5 !important;
 
+    /* Posición y desfase idéntico al Hero Principal */
+    transform: translate(-60px, -24px) !important;
+    width: 100% !important;
+    margin: 0 !important;
 }
 
 /* ==========================================
