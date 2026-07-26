@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
      * @param {string} label - Categoría seleccionada
      */
     async function showCategory(label) {
+        if (!subNav) return;
+        
         subNav.classList.add("active");
         subNav.innerHTML = "<span>Cargando datos...</span>";
 
@@ -65,28 +67,42 @@ document.addEventListener("DOMContentLoaded", () => {
      * @param {Object} postData - Objeto con la información de la entrada
      */
     function renderExpandedPost(postData) {
+        if (!heroExpanded) return;
+
         const title = postData.title.$t;
         // Obtenemos el contenido completo del post (o el resumen si no hay contenido extenso)
         const content = postData.content ? postData.content.$t : (postData.summary ? postData.summary.$t : "");
 
-        // Inyectamos el botón 'VOLVER AL HOME' DENTRO del contenedor del post
-        heroExpanded.innerHTML = `
-            <div class="hero-expanded-content" id="postContainer">
-                <button id="btnClosePost" class="btn-close-expanded" style="cursor:pointer; margin-bottom:15px; background:transparent; border:1px solid #00ffcc; color:#00ffcc; padding:5px 12px; font-family:inherit;">← VOLVER AL HOME</button>
-                <article class="post-content">
-                    <h1 style="color:#00ffcc; margin-bottom:15px;">${title}</h1>
-                    <div class="post-body">${content}</div>
-                </article>
-            </div>
+        // Buscamos el contenedor interno o lo creamos si fue destruido previamente
+        let postContainer = document.getElementById("postContainer");
+        
+        if (!postContainer) {
+            postContainer = document.createElement("div");
+            postContainer.className = "hero-expanded-content";
+            postContainer.id = "postContainer";
+            heroExpanded.appendChild(postContainer);
+        }
+
+        // Inyectamos el contenido dentro de #postContainer sin destruir .hero-expanded
+        postContainer.innerHTML = `
+            <button id="btnClosePost" class="btn-close-expanded" style="cursor:pointer; margin-bottom:15px; background:transparent; border:1px solid #00ffcc; color:#00ffcc; padding:5px 12px; font-family:inherit;">← VOLVER AL HOME</button>
+            <article class="post-content">
+                <h1 style="color:#00ffcc; margin-bottom:15px;">${title}</h1>
+                <div class="post-body">${content}</div>
+            </article>
         `;
 
-        // Activamos la vista del post mediante la clase en .right-column
+        // Activación de clases simultáneas para garantizar la visibilidad CSS
         if (rightColumn) {
             rightColumn.classList.add("post-active");
         }
+        heroExpanded.classList.add("active");
 
         // Asignamos el evento al botón de volver al Home
-        document.getElementById("btnClosePost").addEventListener("click", closePost);
+        const btnClose = document.getElementById("btnClosePost");
+        if (btnClose) {
+            btnClose.addEventListener("click", closePost);
+        }
     }
 
     /**
@@ -98,14 +114,22 @@ document.addEventListener("DOMContentLoaded", () => {
             rightColumn.classList.remove("post-active");
         }
 
-        // 2. Ocultar y limpiar el submenú sub-nav
+        // 2. Desactivar clase del Hero Expandido
+        if (heroExpanded) {
+            heroExpanded.classList.remove("active");
+        }
+
+        // 3. Ocultar y limpiar el submenú sub-nav
         if (subNav) {
             subNav.classList.remove("active");
             subNav.innerHTML = "";
         }
 
-        // 3. Limpiar contenido del Hero Expandido
-        heroExpanded.innerHTML = "";
+        // 4. Limpiar únicamente el contenido del post sin borrar el contenedor
+        const postContainer = document.getElementById("postContainer");
+        if (postContainer) {
+            postContainer.innerHTML = "";
+        }
     }
 
     // 2. Escuchador de clics en la barra de navegación principal (Categorías)
@@ -120,19 +144,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // 3. Escuchador de clics en el submenú (Entradas del proyecto)
-    subNav.addEventListener("click", e => {
-        const item = e.target.closest(".submenu-link");
-        if (!item) return;
+    if (subNav) {
+        subNav.addEventListener("click", e => {
+            const item = e.target.closest(".submenu-link");
+            if (!item) return;
 
-        e.preventDefault();
+            e.preventDefault();
 
-        // Recuperamos el índice de la entrada almacenada
-        const postIndex = item.getAttribute("data-index");
-        const selectedPost = currentPosts[postIndex];
+            // Recuperamos el índice de la entrada almacenada
+            const postIndex = item.getAttribute("data-index");
+            const selectedPost = currentPosts[postIndex];
 
-        if (selectedPost) {
-            renderExpandedPost(selectedPost);
-        }
-    });
+            if (selectedPost) {
+                renderExpandedPost(selectedPost);
+            }
+        });
+    }
 
 });
