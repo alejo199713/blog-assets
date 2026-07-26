@@ -56,29 +56,23 @@
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/HERO.svg") center/100% 100% no-repeat;
 }
 
-/* ===== HERO EXPANDIDO (ESTADO OCULTO POR DEFECTO) ===== */
 /* ==========================================
-   HERO EXPANDIDO - POSICIONAMIENTO DIRECTO
+   HERO EXPANDIDO - POSICIONAMIENTO Y CORRECCIÓN
    ========================================== */
 
 .hero-expanded {
     display: none;
     position: relative;
-    
-    /* CAMBIA ESTE VALOR EN PÍXELES PARA BAJAR O SUBIR */
-    transform: translateY(0px) !important; 
-    
     min-height: 1000px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
-    padding: 30px;
+    padding: 40px 30px;
     box-sizing: border-box;
-}
-
-/* Añade esto justo debajo de .hero-expanded */
-#postContainer, 
-.post-content {
-    max-height: 500px; /* Define el límite de altura */
-    overflow-y: scroll !important; /* Fuerza la barra de desplazamiento */
+    
+    /* 
+       AJUSTE DE POSICIÓN VERTICAL:
+       Aumenta este valor si necesitas que baje más (ej. 40px, 60px, 80px)
+    */
+    margin-top: 24px !important; 
 }
 
 /* ==========================================
@@ -101,25 +95,30 @@
    CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
    ========================================== */
 
+#postContainer,
 .hero-expanded-content,
 .post-content {
-    max-height: 650px;       /* Altura máxima antes de activar el scroll */
-    overflow-y: auto;        /* Habilita la barra vertical de desplazamiento */
-    padding-right: 15px;     /* Margen interno para no tapar el texto con la barra */
+    max-height: 550px;       /* Controla el alto visible antes de activar scroll */
+    overflow-y: auto !important; /* Habilita el desplazamiento vertical */
+    padding-right: 10px;     /* Espacio para la barra de scroll */
+    margin-top: 20px;
 }
 
 /* Personalización Cyberpunk para la barra de scroll */
+#postContainer::-webkit-scrollbar,
 .hero-expanded-content::-webkit-scrollbar,
 .post-content::-webkit-scrollbar {
     width: 8px;
 }
 
+#postContainer::-webkit-scrollbar-track,
 .hero-expanded-content::-webkit-scrollbar-track,
 .post-content::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.5);
     border: 1px solid #00ffcc;
 }
 
+#postContainer::-webkit-scrollbar-thumb,
 .hero-expanded-content::-webkit-scrollbar-thumb,
 .post-content::-webkit-scrollbar-thumb {
     background: #00ffcc;
