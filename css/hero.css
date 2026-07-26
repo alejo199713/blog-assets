@@ -102,7 +102,7 @@
     max-height: 550px;        /* Controla el alto visible antes de activar scroll */
     overflow-y: auto !important; /* Habilita el desplazamiento vertical */
     padding-right: 10px;      /* Espacio para la barra de scroll */
-    margin-top: 200px;
+    margin-top: 20px;
 }
 
 /* Personalización Cyberpunk para la barra de scroll */
