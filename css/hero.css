@@ -68,11 +68,6 @@
     padding: 40px 30px;
     box-sizing: border-box;
     
-    /* 
-       AJUSTE DE POSICIÓN VERTICAL:
-       Aumenta este valor si necesitas que baje más (ej. 40px, 60px, 80px)
-    */
-    margin-top: 904px !important; 
 }
 
 /* ==========================================
