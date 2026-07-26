@@ -1,101 +1,63 @@
-.hero{
-
-    width:min(100%,var(--max-width));
-    margin:0;
-
-    display:grid;
-    grid-template-columns:350px 1fr;
-    gap:25px;
-
-    align-items:start;
-
-}
-
-/* ===== SIDEBAR ===== */
-
-.left-column{
-
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-
-}
-
-/* ===== CONTENIDO ===== */
-
-.right-column{
-
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-
-    transform:translate(-60px,-24px);
-
-}
-
-/* ===== TARJETAS ===== */
-
-.avatar-card{
-
-    position:relative;
-
-    height:275px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/AVATAR.svg") center/100% 100% no-repeat;
-
-}
-
-.system-card{
-
-    position:relative;
-
-    height:185px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/SYSTEM-STATUS.svg") center/100% 100% no-repeat;
-
-}
-
-.activity-card{
-
-    position:relative;
-
-    height:215px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/ACTIVITY.svg") center/100% 100% no-repeat;
-
-}
-
-/* ===== HERO NORMAL ===== */
-
-.hero-card{
-
-    position:relative;
-
-    min-height:200px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/HERO.svg") center/100% 100% no-repeat;
-
-}
-
-/* ===== HERO EXPANDIDO ===== */
-
-.hero-expanded{
-
-    display:none;
-
-    position:relative;
-
-    min-height:1000px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
-
-}
-
 /* ==========================================
-   HERO EXPANDIDO Y ESTADOS DE VISIBILIDAD
+   ESTRUCTURA PRINCIPAL Y GRID
    ========================================== */
 
-/* Por defecto, el Hero Expandido está oculto */
+.hero {
+    width: min(100%, var(--max-width));
+    margin: 0;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* ===== COLUMNA IZQUIERDA (SIDEBAR) ===== */
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== COLUMNA DERECHA (CONTENIDO) ===== */
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transform: translate(-60px, -24px);
+}
+
+/* ===== TARJETAS SIDEBAR ===== */
+
+.avatar-card {
+    position: relative;
+    height: 275px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/AVATAR.svg") center/100% 100% no-repeat;
+}
+
+.system-card {
+    position: relative;
+    height: 185px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/SYSTEM-STATUS.svg") center/100% 100% no-repeat;
+}
+
+.activity-card {
+    position: relative;
+    height: 215px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/ACTIVITY.svg") center/100% 100% no-repeat;
+}
+
+/* ===== HERO NORMAL (HOME) ===== */
+
+.hero-card {
+    position: relative;
+    min-height: 200px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/HERO.svg") center/100% 100% no-repeat;
+}
+
+/* ===== HERO EXPANDIDO (ESTADO OCULTO POR DEFECTO) ===== */
+
 .hero-expanded {
     display: none;
     position: relative;
@@ -103,13 +65,14 @@
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
     padding: 30px;
     box-sizing: border-box;
+    margin-top: 24px !important; /* Compensa el desfase para alinearlo abajo */
 }
 
-/* 
-   CUANDO SE ACTIVA UN POST (Clase .post-active en .right-column):
-*/
+/* ==========================================
+   VISIBILIDAD Y ALTERNANCIA (VISTA POST)
+   ========================================== */
 
-/* 1. Ocultar los elementos de la vista Home */
+/* 1. Ocultar los elementos del Home cuando hay un post activo */
 .right-column.post-active .hero-card,
 .right-column.post-active .projects-card,
 .right-column.post-active .bottom-panels {
@@ -121,70 +84,75 @@
     display: block !important;
 }
 
-/* ===== PROYECTOS ===== */
+/* ==========================================
+   CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
+   ========================================== */
 
-.projects-card{
-
-    position:relative;
-
-    min-height:370px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Proyectos-Destacados.svg") center/100% 100% no-repeat;
-
-    transform:translateY(-24px);
-
+.hero-expanded-content,
+.post-content {
+    max-height: 650px;       /* Altura máxima antes de activar el scroll */
+    overflow-y: auto;        /* Habilita la barra vertical de desplazamiento */
+    padding-right: 15px;     /* Margen interno para no tapar el texto con la barra */
 }
 
-.projects-card.hidden{
-
-    display:none;
-
+/* Personalización Cyberpunk para la barra de scroll */
+.hero-expanded-content::-webkit-scrollbar,
+.post-content::-webkit-scrollbar {
+    width: 8px;
 }
 
-/* ===== PANELES ===== */
-
-.bottom-panels{
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:10px;
-
-    transform:translateY(-60px);
-
+.hero-expanded-content::-webkit-scrollbar-track,
+.post-content::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #00ffcc;
 }
 
-.bottom-panels.hidden{
-
-    display:none;
-
+.hero-expanded-content::-webkit-scrollbar-thumb,
+.post-content::-webkit-scrollbar-thumb {
+    background: #00ffcc;
+    border-radius: 2px;
 }
 
-.console-card{
+/* ===== PROYECTOS DESTACADOS ===== */
 
-    position:relative;
-
-    min-height:190px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Console.svg") center/100% 100% no-repeat;
-
+.projects-card {
+    position: relative;
+    min-height: 370px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Proyectos-Destacados.svg") center/100% 100% no-repeat;
+    transform: translateY(-24px);
 }
 
-.social-card{
-
-    position:relative;
-
-    min-height:190px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Social-Hub.svg") center/100% 100% no-repeat;
-
+.projects-card.hidden {
+    display: none;
 }
 
-.stats-card{
+/* ===== PANELES INFERIORES ===== */
 
-    position:relative;
+.bottom-panels {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    transform: translateY(-60px);
+}
 
-    min-height:190px;
+.bottom-panels.hidden {
+    display: none;
+}
 
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Project-Stats.svg") center/100% 100% no-repeat;
+.console-card {
+    position: relative;
+    min-height: 190px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Console.svg") center/100% 100% no-repeat;
+}
 
+.social-card {
+    position: relative;
+    min-height: 190px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Social-Hub.svg") center/100% 100% no-repeat;
+}
+
+.stats-card {
+    position: relative;
+    min-height: 190px;
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Project-Stats.svg") center/100% 100% no-repeat;
 }
