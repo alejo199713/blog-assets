@@ -63,7 +63,7 @@
     position: relative;
     
     /* CAMBIA ESTA LÍNEA PARA BAJAR O SUBIR EL CONTENEDOR */
-    top: 40px; /* Incrementa este valor para bajarlo más (ej. 80px) */
+    top: 0px; /* Incrementa este valor para bajarlo más (ej. 80px) */
     
     min-height: 1000px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
