@@ -63,7 +63,7 @@
 .hero-expanded {
     display: none;
     position: relative;
-    min-height: 100px;
+    min-height: 1000px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center/100% auto no-repeat;
     padding: 40px 30px;
     box-sizing: border-box;
