@@ -69,13 +69,15 @@ document.addEventListener("DOMContentLoaded", () => {
         // Obtenemos el contenido completo del post (o el resumen si no hay contenido extenso)
         const content = postData.content ? postData.content.$t : (postData.summary ? postData.summary.$t : "");
 
-        // Inyectamos la estructura interna en heroExpanded
+        // Inyectamos el botón 'VOLVER AL HOME' DENTRO del contenedor del post
         heroExpanded.innerHTML = `
-            <button id="btnClosePost" class="btn-close-expanded" style="cursor:pointer; margin-bottom:15px;">← VOLVER AL HOME</button>
-            <article class="post-content">
-                <h1 style="color:#00ffcc; margin-bottom:15px;">${title}</h1>
-                <div class="post-body">${content}</div>
-            </article>
+            <div class="hero-expanded-content" id="postContainer">
+                <button id="btnClosePost" class="btn-close-expanded" style="cursor:pointer; margin-bottom:15px; background:transparent; border:1px solid #00ffcc; color:#00ffcc; padding:5px 12px; font-family:inherit;">← VOLVER AL HOME</button>
+                <article class="post-content">
+                    <h1 style="color:#00ffcc; margin-bottom:15px;">${title}</h1>
+                    <div class="post-body">${content}</div>
+                </article>
+            </div>
         `;
 
         // Activamos la vista del post mediante la clase en .right-column
@@ -88,12 +90,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /**
-     * Oculta el Hero Expandido y regresa a la vista inicial del Home
+     * Oculta el Hero Expandido, oculta el submenú y regresa a la vista inicial del Home
      */
     function closePost() {
+        // 1. Desactivar vista post en la columna derecha
         if (rightColumn) {
             rightColumn.classList.remove("post-active");
         }
+
+        // 2. Ocultar y limpiar el submenú sub-nav
+        if (subNav) {
+            subNav.classList.remove("active");
+            subNav.innerHTML = "";
+        }
+
+        // 3. Limpiar contenido del Hero Expandido
         heroExpanded.innerHTML = "";
     }
 
