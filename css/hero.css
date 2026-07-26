@@ -92,7 +92,7 @@
     overflow: hidden !important; /* Mantiene el contenido dentro de los bordes */
 }
 
-/* 2. Regla de activación cuando la entrada está abierta */
+/* 2. Regla de activación cuando la entrada está abierta -------------------------------------------------------------*/
 .right-column.post-active .hero-expanded,
 .hero-expanded.active {
     display: block !important;
@@ -102,7 +102,7 @@
     z-index: 5 !important;
 
     /* Posición y desfase idéntico al Hero Principal */
-    transform: translate(-60px, -24px) !important;
+    transform: translate(0px, -24px) !important;
     width: 100% !important;
     margin: 0 !important;
 }
