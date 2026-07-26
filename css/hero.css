@@ -60,19 +60,18 @@
    HERO EXPANDIDO - POSICIONAMIENTO Y CORRECCIÓN
    ========================================== */
 
-.hero-expanded{
-
-    display:none;
-    position:relative;
-    min-height:1000px;
-
-    background:url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg")
-               800px 800px /100% 100% no-repeat;
-
+.hero-expanded {
+    display: none;
+    position: relative;
+    min-height: 1000px;
+    /* Corrección: La imagen encaja centrada arriba y escala al 100% */
+    background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% auto no-repeat;
+    padding: 40px 30px;
+    box-sizing: border-box;
 }
 
-.hero-expanded.active{
-    display:block;
+.hero-expanded.active {
+    display: block;
 }
 
 /* ==========================================
@@ -93,10 +92,18 @@
     display: none !important;
 }
 
-/* 3. Fuerza al Hero Expandido a alinearse en la cima de la columna */
+/* 3. MUEVE EL HERO EXPANDIDO DESDE ESTA LÍNEA */
 .right-column.post-active .hero-expanded {
     display: block !important;
+    
+    /* 
+       AQUÍ CONTROLAS LA POSICIÓN VERTICAL DEL MARCO:
+       - Números negativos (ej: -30px, -50px) -> SUBEN el marco.
+       - Números positivos (ej: 10px, 30px) -> BAJAN el marco.
+    */
+    transform: translateY(-20px) !important; 
 }
+
 /* ==========================================
    CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
    ========================================== */
@@ -104,9 +111,9 @@
 #postContainer,
 .hero-expanded-content,
 .post-content {
-    max-height: 550px;        /* Controla el alto visible antes de activar scroll */
+    max-height: 550px;           /* Controla el alto visible antes de activar scroll */
     overflow-y: auto !important; /* Habilita el desplazamiento vertical */
-    padding-right: 10px;      /* Espacio para la barra de scroll */
+    padding-right: 10px;         /* Espacio para la barra de scroll */
     margin-top: 20px;
 }
 
