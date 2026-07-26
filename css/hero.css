@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* Se eliminan los 'transform' negativos para evitar desalineaciones */
+    transform: translate(-60px, -24px); /* Alineación offset original */
 }
 
 /* ===== TARJETAS SIDEBAR ===== */
@@ -57,7 +57,7 @@
 }
 
 /* ==========================================
-   HERO EXPANDIDO - ESTADO BASE
+   HERO EXPANDIDO - ESTADO BASE Y VISIBILIDAD
    ========================================== */
 
 .hero-expanded {
@@ -74,25 +74,26 @@
    RESET DE FLUJO Y VISIBILIDAD (VISTA POST)
    ========================================== */
 
-/* 1. Al activar la vista de post en la columna derecha */
+/* 1. Al activar un post, se limpia el flujo de la columna derecha */
 .right-column.post-active {
     display: block !important;
+    transform: none !important;
 }
 
-/* 2. Ocultar los elementos de la portada */
+/* 2. Ocultar los elementos del Home */
 .right-column.post-active .hero-card,
 .right-column.post-active .projects-card,
 .right-column.post-active .bottom-panels {
     display: none !important;
 }
 
-/* 3. Mostrar el contenedor expandido alineado en el tope */
+/* 3. Muestra el Hero Expandido alineado correctamente */
 .right-column.post-active .hero-expanded,
 .hero-expanded.active {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-    transform: none !important; /* Mantiene la posición natural sin desalinearse */
+    transform: translateY(-24px) !important;
 }
 
 /* ==========================================
@@ -102,8 +103,8 @@
 #postContainer,
 .hero-expanded-content,
 .post-content {
-    max-height: 550px;           /* Alto máximo del contenedor interno */
-    overflow-y: auto !important; /* Desplazamiento vertical cuando sea necesario */
+    max-height: 550px;
+    overflow-y: auto !important;
     padding-right: 10px;
     margin-top: 20px;
 }
@@ -135,6 +136,7 @@
     position: relative;
     min-height: 370px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Proyectos-Destacados.svg") center / 100% 100% no-repeat;
+    transform: translateY(-24px);
 }
 
 .projects-card.hidden {
@@ -147,6 +149,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    transform: translateY(-60px);
 }
 
 .bottom-panels.hidden {
