@@ -87,13 +87,13 @@
     display: none !important;
 }
 
-/* 3. Muestra el Hero Expandido alineado correctamente */
+/* 3. Muestra el Hero Expandido alineado correctament-----------------------------------------------------------------------------------------------------e */
 .right-column.post-active .hero-expanded,
 .hero-expanded.active {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
-   transform: translate(-900px, -20px) !important;
+   transform: translate(-900px, -200px) !important;
 }
 
 /* ==========================================
