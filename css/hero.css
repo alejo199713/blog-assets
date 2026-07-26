@@ -57,7 +57,7 @@
 }
 
 /* ==========================================
-   HERO EXPANDIDO (VISTA POST)
+   HERO EXPANDIDO - POSICIONAMIENTO Y CORRECCIÓN
    ========================================== */
 
 .hero-expanded {
@@ -70,41 +70,40 @@
 }
 
 /* ==========================================
-   VISIBILIDAD Y ALTERNANCIA (ESTADO ACTIVO)
+   RESET DE FLUJO Y VISIBILIDAD (VISTA POST)
    ========================================== */
 
-/* 1. Ocultar todos los elementos del Home cuando un post está activo */
-.right-column.post-active #heroCard,
-.right-column.post-active #projectsCard,
-.right-column.post-active #bottomPanels,
+/* 1. Al activar el post, la columna derecha pasa a un flujo de bloque limpio sin desplazamientos */
+.right-column.post-active {
+    transform: none !important;
+    gap: 0 !important;
+    display: block !important;
+}
+
+/* 2. Ocultar los elementos del Home cuando hay un post activo */
 .right-column.post-active .hero-card,
 .right-column.post-active .projects-card,
 .right-column.post-active .bottom-panels {
     display: none !important;
-    height: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
-/* 2. Mostrar el Hero Expandido en la parte superior */
-.right-column.post-active #heroExpanded,
+/* 3. Fuerza al Hero Expandido a alinearse en la cima de la columna */
 .right-column.post-active .hero-expanded {
     display: block !important;
     margin-top: 0 !important;
-    transform: none !important;
 }
 
 /* ==========================================
-   CONTENIDO INTERNO Y SCROLL DE ENTRADAS
+   CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
    ========================================== */
 
 #postContainer,
 .hero-expanded-content,
 .post-content {
-    max-height: 550px;           /* Limita la altura visible del contenido */
-    overflow-y: auto !important; /* Muestra el scroll vertical si supera los 550px */
-    padding-right: 15px;         /* Espacio para la barra sin tapar el texto */
-    margin-top: 20px;            /* Separa el contenido del borde del marco */
+    max-height: 550px;        /* Controla el alto visible antes de activar scroll */
+    overflow-y: auto !important; /* Habilita el desplazamiento vertical */
+    padding-right: 10px;      /* Espacio para la barra de scroll */
+    margin-top: 20px;
 }
 
 /* Personalización Cyberpunk para la barra de scroll */
