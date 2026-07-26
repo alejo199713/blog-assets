@@ -84,13 +84,6 @@
 /* 2. Mostrar únicamente el Hero Expandido */
 .right-column.post-active .hero-expanded {
     display: block !important;
-position: relative !important;
-    
-    /* 
-       Ajusta este valor para bajar el Hero Expandido.
-       Al estar dentro de .post-active, NO afectará al Hero principal.
-    */
-    top: 600px !important; 
 }
 
 /* ==========================================
