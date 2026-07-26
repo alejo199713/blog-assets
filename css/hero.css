@@ -96,7 +96,7 @@
 /* 3. Fuerza al Hero Expandido a alinearse en la cima de la columna */
 .right-column.post-active .hero-expanded {
     display: block !important;
-
+}
 /* ==========================================
    CONTENIDO INTERNO Y SCROLL DE LAS ENTRADAS
    ========================================== */
