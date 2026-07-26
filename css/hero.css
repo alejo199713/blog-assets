@@ -57,44 +57,44 @@
 }
 
 /* ==========================================
-   HERO EXPANDIDO - POSICIONAMIENTO Y CORRECCIÓN
+   HERO EXPANDIDO - ESTADO BASE
    ========================================== */
 
 .hero-expanded {
-    display: none; /* Oculto por defecto en la vista Home */
+    display: none; /* Oculto por defecto en la vista principal */
     position: relative;
-    min-height: 1000px;
+    width: 100%;
+    min-height: 800px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% auto no-repeat;
     padding: 40px 30px;
     box-sizing: border-box;
-}
-
-.hero-expanded.active {
-    display: block;
 }
 
 /* ==========================================
    RESET DE FLUJO Y VISIBILIDAD (VISTA POST)
    ========================================== */
 
-/* 1. Al activar el post, la columna derecha cambia su flujo */
+/* 1. Al activar un post, la columna derecha elimina sus desplazamientos del Home */
 .right-column.post-active {
     transform: none !important;
     gap: 0 !important;
     display: block !important;
 }
 
-/* 2. Ocultar los elementos del Home cuando la columna tiene .post-active */
+/* 2. Ocultar todos los paneles del Home cuando hay una entrada activa */
 .right-column.post-active .hero-card,
 .right-column.post-active .projects-card,
 .right-column.post-active .bottom-panels {
     display: none !important;
 }
 
-/* 3. ÚNICO ACTIVADOR: Muestra y posiciona el Hero Expandido */
-.right-column.post-active .hero-expanded {
+/* 3. ACTIVADOR UNIFICADO: Muestra el marco Cyberpunk Expandido */
+.right-column.post-active .hero-expanded,
+.hero-expanded.active {
     display: block !important;
-    transform: translateY(-24px) !important; /* Ajuste vertical alineado */
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(-24px) !important; /* Ajuste alineado con la columna izquierda */
 }
 
 /* ==========================================
@@ -104,9 +104,9 @@
 #postContainer,
 .hero-expanded-content,
 .post-content {
-    max-height: 550px;           /* Controla el alto visible antes de activar scroll */
-    overflow-y: auto !important; /* Habilita el desplazamiento vertical */
-    padding-right: 10px;         /* Espacio para la barra de scroll */
+    max-height: 550px;           /* Alto máximo visible del texto antes de hacer scroll */
+    overflow-y: auto !important; /* Activa la barra de desplazamiento vertical */
+    padding-right: 10px;         /* Margen para que el texto no toque la barra */
     margin-top: 20px;
 }
 
