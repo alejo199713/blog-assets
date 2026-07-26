@@ -71,6 +71,13 @@
     box-sizing: border-box;
 }
 
+/* Añade esto justo debajo de .hero-expanded */
+#postContainer, 
+.post-content {
+    max-height: 500px; /* Define el límite de altura */
+    overflow-y: scroll !important; /* Fuerza la barra de desplazamiento */
+}
+
 /* ==========================================
    VISIBILIDAD Y ALTERNANCIA (VISTA POST)
    ========================================== */
