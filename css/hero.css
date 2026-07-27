@@ -25,6 +25,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transform: translate(-55px, -26px) !important;
 }
 
 /* ===== TARJETAS SIDEBAR ===== */
@@ -81,8 +82,7 @@
     display: none;
     position: relative;
     width: 100%;
-    /* Altura fija exacta basada en la mesa de trabajo de Illustrator */
-    min-height: 200px;    
+       
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% 100% no-repeat;
     padding: 40px 30px;
     box-sizing: border-box;
@@ -98,7 +98,6 @@
     position: relative !important;
     z-index: 5 !important;
 
-    /* Posición y desfase idéntico al Hero Principal */
     width: 100% !important;
     margin: 0 !important;
 }
@@ -147,7 +146,7 @@
     position: relative;
     min-height: 370px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Proyectos-Destacados.svg") center / 100% 100% no-repeat;
-    transform: translateY(-24px);
+    transform: translateY(-10px);
 }
 
 .projects-card.hidden {
@@ -160,7 +159,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    transform: translateY(-60px);
+    transform: translateY(-23px);
 }
 
 .bottom-panels.hidden {
