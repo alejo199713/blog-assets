@@ -81,10 +81,8 @@
     display: none;
     position: relative;
     width: 100%;
-    
     /* Altura fija exacta basada en la mesa de trabajo de Illustrator */
-    height: 563.89px !important; 
-    
+    min-height: 200px;    
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% 100% no-repeat;
     padding: 40px 30px;
     box-sizing: border-box;
@@ -101,7 +99,6 @@
     z-index: 5 !important;
 
     /* Posición y desfase idéntico al Hero Principal */
-    transform: translate(-60px, 0px) !important;
     width: 100% !important;
     margin: 0 !important;
 }
