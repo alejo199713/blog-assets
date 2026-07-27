@@ -1,7 +1,6 @@
 /* ==========================================
    ESTRUCTURA PRINCIPAL Y GRID
    ========================================== */
-
 .hero {
     width: min(100%, var(--max-width));
     margin: 0 auto;
@@ -25,7 +24,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    transform: translate(-55px, -26px) !important;
+    transform: translate(-50px, -26px) !important;
 }
 
 /* ===== TARJETAS SIDEBAR ===== */
@@ -60,10 +59,11 @@
    RESET DE FLUJO Y OCULTAMIENTO (VISTA POST)
    ========================================== */
 
-/* 1. Mantenemos el flujo activo de la columna derecha */
+/* 1. Mantenemos el flujo activo de la columna derecha ----------------------------------------------------------------------------------------------------------------*/
 .right-column.post-active {
     display: flex !important;
     flex-direction: column !important;
+    transform: translate(-50px, -110px) !important;
 }
 
 /* 2. OCULTAR HERO NORMAL Y PANELES DEL HOME AL ABRIR UN POST */
@@ -82,11 +82,16 @@
     display: none;
     position: relative;
     width: 100%;
-       
+    
+    /* ALTURA FIJA: Congela el marco SVG para que nunca se deforme */
+    height: 900px !important; 
+        
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Hero_Expanded.svg") top center / 100% 100% no-repeat;
-    padding: 40px 30px;
+    
+    /* PADDING EN CERO: Evita que la caja exterior crezca o se desplace */
+    padding: 0 !important; 
     box-sizing: border-box;
-    overflow: hidden !important; /* Mantiene el contenido dentro de los bordes */
+    overflow: hidden !important; 
 }
 
 /* 2. Regla de activación cuando la entrada está abierta ----------------------------------------------------------------------------------------------------------------*/
@@ -110,12 +115,16 @@
 #postContainer,
 .hero-expanded-content,
 .post-content {
-    /* Altura calculada para respetar el padding de 40px arriba y abajo */
-    height: 483px !important; 
-    overflow-y: auto !important; /* Habilita la barra de desplazamiento interna */
-    padding-right: 15px;
-    margin-top: 0px;
+    height: 100% !important; 
+    overflow-y: auto !important; 
+    
+    /* PADDING DE 2 VALORES:
+       - Primer valor (80px): Empuja el texto hacia abajo para librar el marco superior.
+       - Segundo valor (45px): Protege los bordes laterales del marco SVG. */
+    padding: 150px 45px !important; 
+    
     box-sizing: border-box;
+    width: 100%;
 }
 
 /* 4. Estilos Cyberpunk para la barra de scroll */
