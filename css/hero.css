@@ -59,7 +59,7 @@
    RESET DE FLUJO Y OCULTAMIENTO (VISTA POST)
    ========================================== */
 
-/* 1. Mantenemos el flujo activo de la columna derecha ----------------------------------------------------------------------------------------------------------------*/
+/* 1. Mantenemos el flujo activo de la columna derecha */
 .right-column.post-active {
     display: flex !important;
     flex-direction: column !important;
@@ -94,7 +94,7 @@
     overflow: hidden !important; 
 }
 
-/* 2. Regla de activación cuando la entrada está abierta ----------------------------------------------------------------------------------------------------------------*/
+/* 2. Regla de activación cuando la entrada está abierta */
 .right-column.post-active .hero-expanded,
 .hero-expanded.active {
     display: block !important;
@@ -119,7 +119,7 @@
     overflow-y: auto !important; 
     
     /* PADDING DE 2 VALORES:
-       - Primer valor (80px): Empuja el texto hacia abajo para librar el marco superior.
+       - Primer valor (150px): Empuja el texto hacia abajo para librar el marco superior.
        - Segundo valor (45px): Protege los bordes laterales del marco SVG. */
     padding: 150px 45px !important; 
     
@@ -191,4 +191,27 @@
     position: relative;
     min-height: 190px;
     background: url("https://alejo199713.github.io/blog-assets/assets/ui/Project-Stats.svg") center / 100% 100% no-repeat;
+}
+
+/* ==========================================
+   BLOQUEO TOTAL DE SCROLL GLOBAL
+   ========================================== */
+
+/* 1. Inhabilitar totalmente el scroll de la ventana web */
+html, 
+body {
+    height: 100vh !important;
+    max-height: 100vh !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 2. ÚNICO contenedor permitido para scroll (Entradas) */
+#postContainer,
+.hero-expanded-content,
+.post-content {
+    height: 100% !important;
+    overflow-y: auto !important;
+    box-sizing: border-box;
 }
